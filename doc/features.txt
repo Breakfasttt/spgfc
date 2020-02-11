@@ -1,0 +1,55 @@
+
+# describe features of share pokemon go trainer website
+
+
+lexique : 
+
+Unknow user : :  a user not connected on the website 
+User : a person who have an account on the website using Gconnect
+Trainer : a pokemonGo account, one user can have multiple trainer account
+Trainer code : the pokemon Go friends code associed with a trainer
+trainer geoloc : the main city where a trainer play at pokemon go.
+trainer team : a regroupement of trainers. Use can add there trainer on it. (like mmo guild)
+
+-------------------------------
+feature : google connect
+intend milestone : 0.3
+-------------------------------
+
+- Permit Unknow user to login/logout with Gconnect.
+- When a user is not connected, All features was blocked except main page information + login feature.
+
+
+-------------------------------
+feature : homepage
+intend milestone : 0.2
+-------------------------------
+
+- just the homepage explain the utility of this siteweb and some information about legal and connection 
+- redirect to the login page
+
+-------------------------------
+feature : sidebar
+intend milestone : 0.2
+-------------------------------
+
+left sliding Sidebar navigation (user can hide it)
+
+when user is not connected we see : 
+
+- homepage
+- account settings who redirect to login
+- (legal information like intellectual property ?)
+
+when user is connected we see : 
+
+- homepage
+- trainer search
+- trainer team search
+- trainer team user subscribe. (here, user can create a trainer team too)
+- account settings (website language, main localization, logout, delete account)
+- (legal information like intellectual property ?)
+
+
+
+

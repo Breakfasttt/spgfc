@@ -1,0 +1,92 @@
+
+
+# describe intend development story of share pokemon go trainer code website
+
+---------------
+milestone 0.1 : 
+---------------
+
+- describe all feature on a file and tag each with a given milestone
+- make wireframe of entire all site
+- make flowchart (exemple of a user when it come for the first time on this website
+- make a full database schem
+
+# for now, we just describe the main feature dev of each milestone
+# see feature.doc to check details 
+
+
+---------------
+milestone 0.2 :
+---------------
+
+- have a symfony project configure (last version)
+- have a main Twig template for navigation and receive content
+- have a first main page
+
+---------------
+milestone 0.3 :
+---------------
+
+- Create database
+- Connect and store user with google connect
+- permit user to delete account
+- add a database system for text localisation
+
+---------------
+milestone 0.4 :
+---------------
+
+- permit user to add (multiple) trainer name/friends code/loc.
+- add geoloc (only city). One main location, and one for each trainer code
+- add language localization on edit profile
+
+---------------
+milestone 0.5 :
+---------------
+
+- add a list and search page to see all trainer code stored in database.
+- add filter for search using city (geoloc + km arround)
+
+
+---------------
+milestone 0.6 :
+---------------
+
+- add a pokemon friend code signalement (wrong/missing friend code, unfamiliar name (like "shit shitting shining pokemon" on a trainer name)
+
+---------------
+milestone 0.7 :
+---------------
+
+- user can create trainer's team (like team rocket)
+- user can delete trainer's team
+- user can join/leave multiple trainer's team with each of trainer "account"
+- add a list and search team fonction (with geoloc filter)
+
+---------------
+milestone 0.8 :
+---------------
+
+- User can edit trainer's team
+
+
+---------------
+milestone 1.0 :
+---------------
+
+- release ? :D
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
