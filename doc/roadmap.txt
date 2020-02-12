@@ -30,15 +30,15 @@ milestone 0.3 :
 - Create database
 - Connect and store user with google connect
 - permit user to delete account
-- add a database system for text localisation
+- implements text localisation
+- add language localization on edit profile
 
 ---------------
 milestone 0.4 :
 ---------------
 
-- permit user to add (multiple) trainer name/friends code/loc.
-- add geoloc (only city). One main location, and one for each trainer code
-- add language localization on edit profile
+- permit user to add (multiple) trainer name/friends code/loc/signalment
+- add geoloc (only city). One main location on user account, and one for each trainer code
 
 ---------------
 milestone 0.5 :

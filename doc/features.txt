@@ -7,17 +7,11 @@ lexique :
 Unknow user : :  a user not connected on the website 
 User : a person who have an account on the website using Gconnect
 Trainer : a pokemonGo account, one user can have multiple trainer account
+bad trainer : fake trainer, not responding trainer, etc.
 Trainer code : the pokemon Go friends code associed with a trainer
 trainer geoloc : the main city where a trainer play at pokemon go.
+trainer gameteam : the pokemon go team of the trainer (valor, mystic or instinct)
 trainer team : a regroupement of trainers. Use can add there trainer on it. (like mmo guild)
-
--------------------------------
-feature : google connect
-intend milestone : 0.3
--------------------------------
-
-- Permit Unknow user to login/logout with Gconnect.
-- When a user is not connected, All features was blocked except main page information + login feature.
 
 
 -------------------------------
@@ -37,18 +31,116 @@ left sliding Sidebar navigation (user can hide it)
 
 when user is not connected we see : 
 
-- homepage
-- account settings who redirect to login
-- (legal information like intellectual property ?)
+- homepage tab
+- account settings who redirect to login tab
+- (legal information like intellectual property ?) tab
 
 when user is connected we see : 
 
-- homepage
-- trainer search
-- trainer team search
-- trainer team user subscribe. (here, user can create a trainer team too)
-- account settings (website language, main localization, logout, delete account)
-- (legal information like intellectual property ?)
+- homepage tab
+- trainer search tab
+- trainer team search tab
+- trainer team user subscribe. (here, user can create a trainer team too) tab
+- account settings (website language, main localization, logout, delete account) tab
+- (legal information like intellectual property ?) tab
+
+
+-------------------------------
+feature : main information
+intend milestone : 0.2
+-------------------------------
+
+Show on homepage a quick explaination of the website (text need to be define)
+with a btn to redirect to connection page
+
+
+-------------------------------
+feature : text localization
+intend milestone : 0.3
+-------------------------------
+
+implements symfony local translations : 
+https://symfony.com/doc/current/translation.html
+
+
+-------------------------------
+feature : google connect
+intend milestone : 0.3
+-------------------------------
+
+- Permit Unknow user to login/logout with Gconnect.
+- When a user is not connected, All features was blocked except main page information + login feature.
+
+-------------------------------
+feature : Store google user
+intend milestone : 0.3
+-------------------------------
+
+Store User on a database to keep basic information
+
+
+-------------------------------
+feature : Account managing page
+intend milestone : 0.3 - 0.4
+-------------------------------
+
+Add an account managing page for user :
+
+-  can set  the locale code (like fr_FR , en_EN, etc, Default will be en_EN)
+- can delete his account => deleting all trainer that the user has created, same for trainer's team, 
+so all trainer on a trainer's team deleted was automaticly remove from this trainer'steam
+- set/remove a default trainer geoloc to search quickly on trainer list
+
+
+-------------------------------
+feature : Trainer creation
+intend milestone : 0.4
+-------------------------------
+
+A user can create a limited number of trainer. (5?) because some user play with 2 or 3 account of pokemon go. 
+A trainer is : a pokemon go name, a trainer code, a trainer gameteam, a trainer geoloc (can be null), a number of signalments.
+Users can signals a "bad" trainer. After a certain number of signals, a symbol "caution" is show on this trainer
+And after many signals, this trainer will be automaticaly remove.
+
+A user can delete a trainer that he has created. (with confirmation)
+
+A user see all of his trainers on search trainer tab.  (above search filter and search result)
+He can add/delete his trainers on this tab too.
+he can see his trainers signalments on this tab too.
+
+
+-------------------------------
+feature : Trainers search list
+intend milestone : 0.5
+-------------------------------
+
+on search trainer tab we can see (in order) : 
+
+- All trainers created by the connected user
+- a simple search filter with trainer gameteam, or geoloc or name (by default, the user geoloc of exist on user account). 
+50 result per page max. a button to start the research
+- the result of the research. (order by nearest geoloc and name of trainer by default)
+
+On the result, all information about all trainer register on an array. With the number of signalements.
+2 button on each line of this array : one to copy the trainer code on clipboard (usefull for mobile), and one for signalments
+
+For geoloc. we check only the distance between the specified city on filters, and trainer geoloc. (using google service ?)
+
+If a trainer have no geoloc, the trainer is show on this list only if the filter disable geoloc.
+
+
+-------------------------------
+feature : Trainers signalment
+intend milestone : 0.5
+-------------------------------
+
+On search list, you can put a button to signal a bad trainer
+There are only one signalments by user by trainer. (a user can't spam 200signalments for one trainer)
+
+When you signal a trainer, you can choose between "not exist" "not responding" "bad name" or "stop playing"
+
+
+
 
 
 
